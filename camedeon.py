@@ -84,23 +84,42 @@ with col2:
 
 st.divider()
 st.header("Le programme")
-col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])
+col1, col_arrow1, col2, col_arrow2, col3, col_arrow3, col4, col_arrow4, col5 = st.columns(
+    [1, 1, 1, 1, 1, 1, 1, 1, 1]
+)
+
 with col1:
     st.image("assets/eglise.svg", width=100)
     st.subheader("16h")
     st.markdown("Cérémonie religieuse")
+
+with col_arrow1:
+    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
+
 with col2:
     st.image("assets/cocktail.svg", width=100)
     st.subheader("18h")
     st.markdown("Cocktail")
+
+with col_arrow2:
+    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
+
 with col3:
     st.image("assets/diner.svg", width=100)
     st.subheader("20h30")
     st.markdown("Diner")
+
+with col_arrow3:
+    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
+
 with col4:
     st.image("assets/soiree.svg", width=100)
     st.subheader("23h")
     st.markdown("Soirée")
+
+with col_arrow4:
+    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
+
 with col5:
     st.image("assets/brunch.svg", width=100)
     st.subheader("11h")
