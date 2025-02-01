@@ -33,7 +33,7 @@ with col1:
     st.link_button("🎁 Notre liste de mariage", "https://www.millemercismariage.com/camedeon/liste.html")
     st.divider()
 with col2:
-    st.image("assets/image_camedeon.jpeg", width=900)
+    st.image("assets/image_camedeon.jpeg", use_column_width="auto")
 
     hide_img_fs = '''
     <style>
