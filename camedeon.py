@@ -10,8 +10,8 @@ st.set_page_config(
 
 API_GOOGLE_MAPS = st.secrets["API_GOOGLE_MAPS"]
 
-#@st.dialog("Répondre à l'invitation")
-@st.experimental_dialog("Répondre à l'invitation")
+@st.dialog("Répondre à l'invitation")
+#@st.experimental_dialog("Répondre à l'invitation")
 def show_contact_form():
     contact_form()
 
