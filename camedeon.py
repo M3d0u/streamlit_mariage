@@ -63,7 +63,7 @@ with col1:
         </iframe>
     </div>
     """
-    st.components.v1.html(html_code, height=300, width=600)
+    st.components.v1.html(html_code, height=300, width=500)
 with col2:
     st.markdown("Réception au Clos Magnitos, à 4 minutes de l'église :")
     address_reception = "Hameau de Magnitot, 1 rue du Prieuré, 95420 Saint-Gervais"
@@ -80,7 +80,7 @@ with col2:
         </iframe>
     </div>
     """
-    st.components.v1.html(html_code, height=300, width=600)
+    st.components.v1.html(html_code, height=300, width=500)
 
 st.divider()
 st.header("Le programme")
