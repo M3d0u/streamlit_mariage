@@ -1,5 +1,5 @@
 import streamlit as st
-from assets.utils import contact_form
+from assets.utils import contact_form, image_to_base64
 
 st.set_page_config(
     page_title="Médéric & Camille",
@@ -11,7 +11,6 @@ st.set_page_config(
 API_GOOGLE_MAPS = st.secrets["API_GOOGLE_MAPS"]
 
 @st.dialog("Répondre à l'invitation")
-#@st.experimental_dialog("Répondre à l'invitation")
 def show_contact_form():
     contact_form()
 
@@ -77,45 +76,64 @@ with col2:
     address_reception = "Hameau de Magnitot, 1 rue du Prieuré, 95420 Saint-Gervais"
     st.components.v1.html(generate_html(address_reception), height=300)
 
+
 st.divider()
+
 st.header("Le programme")
+
+# Define columns with proportionally smaller arrow columns
 col1, col_arrow1, col2, col_arrow2, col3, col_arrow3, col4, col_arrow4, col5 = st.columns(
-    [1, 1, 1, 1, 1, 1, 1, 1, 1]
+    [1, 0.2, 1, 0.2, 1, 0.2, 1, 0.2, 1]
 )
 
 with col1:
-    st.image("assets/eglise.svg", width=150, caption="16h - Cérémonie religieuse")
-    #st.subheader("16h")
-    #st.markdown("Cérémonie religieuse")
+    st.markdown(f"""
+        <div style='text-align: center;'>
+            <img src="data:image/svg+xml;base64,{image_to_base64("assets/eglise.svg")}" width="150">
+        </div>
+        <p style='text-align: center;'>16h - Cérémonie religieuse</p>
+    """, unsafe_allow_html=True)
 
 with col_arrow1:
     st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
 
 with col2:
-    st.image("assets/cocktail.svg", width=150, caption="18h - Cocktail")
-    #st.subheader("18h")
-    #st.markdown("Cocktail")
+    st.markdown(f"""
+        <div style='text-align: center;'>
+            <img src="data:image/svg+xml;base64,{image_to_base64("assets/cocktail.svg")}" width="150">
+        </div>
+        <p style='text-align: center;'>18h - Cocktail</p>
+    """, unsafe_allow_html=True)
 
 with col_arrow2:
     st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
 
 with col3:
-    st.image("assets/diner.svg", width=150, caption="20h30 - Dîner")
-    #st.subheader("20h30")
-    #st.markdown("Diner")
+    st.markdown(f"""
+        <div style='text-align: center;'>
+            <img src="data:image/svg+xml;base64,{image_to_base64("assets/diner.svg")}" width="150">
+        </div>
+        <p style='text-align: center;'>20h30 - Dîner</p>
+    """, unsafe_allow_html=True)
 
 with col_arrow3:
     st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
 
 with col4:
-    st.image("assets/soiree.svg",  width=150, caption="23h - Soirée")
-    #st.subheader("23h")
-    #st.markdown("Soirée")
+    st.markdown(f"""
+        <div style='text-align: center;'>
+            <img src="data:image/svg+xml;base64,{image_to_base64("assets/soiree.svg")}" width="150">
+        </div>
+        <p style='text-align: center;'>23h - Soirée</p>
+    """, unsafe_allow_html=True)
 
 with col_arrow4:
     st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
 
 with col5:
-    st.image("assets/brunch.svg", width=150, caption="11h - Brunch")
-    #st.subheader("11h")
-    #st.markdown("Brunch")
+    st.markdown(f"""
+        <div style='text-align: center;'>
+            <img src="data:image/svg+xml;base64,{image_to_base64("assets/brunch.svg")}" width="150">
+        </div>
+        <p style='text-align: center;'>11h - Brunch</p>
+    """, unsafe_allow_html=True)
