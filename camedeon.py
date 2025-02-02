@@ -83,7 +83,7 @@ st.header("Le programme")
 
 # Define columns with proportionally smaller arrow columns
 col1, col_arrow1, col2, col_arrow2, col3, col_arrow3, col4, col_arrow4, col5 = st.columns(
-    [1, 0.2, 1, 0.2, 1, 0.2, 1, 0.2, 1]
+    [1, 1, 1, 1, 1]
 )
 
 with col1:
@@ -93,10 +93,7 @@ with col1:
         </div>
         <p style='text-align: center;'>16h - Cérémonie religieuse</p>
     """, unsafe_allow_html=True)
-
-with col_arrow1:
-    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
-
+    
 with col2:
     st.markdown(f"""
         <div style='text-align: center;'>
@@ -104,9 +101,6 @@ with col2:
         </div>
         <p style='text-align: center;'>18h - Cocktail</p>
     """, unsafe_allow_html=True)
-
-with col_arrow2:
-    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
 
 with col3:
     st.markdown(f"""
@@ -116,9 +110,6 @@ with col3:
         <p style='text-align: center;'>20h30 - Dîner</p>
     """, unsafe_allow_html=True)
 
-with col_arrow3:
-    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
-
 with col4:
     st.markdown(f"""
         <div style='text-align: center;'>
@@ -126,9 +117,6 @@ with col4:
         </div>
         <p style='text-align: center;'>23h - Soirée</p>
     """, unsafe_allow_html=True)
-
-with col_arrow4:
-    st.markdown("<h1 style='text-align: center;'>→</h1>", unsafe_allow_html=True)
 
 with col5:
     st.markdown(f"""
