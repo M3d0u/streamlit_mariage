@@ -1,8 +1,13 @@
 import streamlit as st
 import requests
+import base64
 import re
 
 WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
+
+def image_to_base64(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
 
 def is_valid_email(email):
     # Basic regex pattern for email validation
