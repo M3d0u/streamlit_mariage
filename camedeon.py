@@ -71,7 +71,7 @@ with col1:
 
 with col2:
     st.markdown("### Réception")
-    st.markdown("Réception au Clos Magnitos, à 4 minutes de l'église :")
+    st.markdown("Réception au Clos Magnitos, à 4 minutes (en voiture) de l'église :")
 
     address_reception = "Hameau de Magnitot, 1 rue du Prieuré, 95420 Saint-Gervais"
     st.components.v1.html(generate_html(address_reception), height=300)
