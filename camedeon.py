@@ -28,7 +28,7 @@ with col1:
 
     st.divider()
     st.header("Notre liste de mariage")
-    st.write("Si vous le souhaitez, vous pouvez nous accompagner dans ce début de vie à deux. Nous vous en remercions du fond du coeur.")
+    st.write("Si vous le souhaitez, vous pouvez nous accompagner dans ce début de vie à deux !")
     st.link_button("🎁 Notre liste de mariage", "https://www.millemercismariage.com/camedeon/liste.html")
     st.divider()
 with col2:
