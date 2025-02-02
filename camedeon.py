@@ -46,41 +46,36 @@ with col2:
 
 st.header("Les lieux")
 col1, col2 = st.columns([1, 1])
+
+# Define a function to generate dynamic HTML for embedding Google Maps
+def generate_html(address):
+    return f"""
+    <div style="width: 100%; height: 300px;">
+        <iframe 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            loading="lazy"
+            style="border:0; width: 100%; height: 100%;"
+            src="https://www.google.com/maps/embed/v1/place?key={API_GOOGLE_MAPS}&q={address}&zoom=15&maptype=roadmap"
+        >
+        </iframe>
+    </div>
+    """
+
 with col1:
+    st.markdown("### Célébration religieuse")
     st.markdown("La célébration religieuse aura lieu en l'église de Saint-Gervais et Saint-Protais, à Saint-Gervais (95420):")
 
     address_eglise = "Rue de l'Église, 95420 Saint-Gervais"
-    html_code = f"""
-    <div style="width: 100%; height: 300px;">
-        <iframe 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            loading="lazy"
-            style="border:0; width: 100%; height: 100%;"
-            src="https://www.google.com/maps/embed/v1/place?key={API_GOOGLE_MAPS}&q={address_eglise}&zoom=15&maptype=roadmap"
-        >
-        </iframe>
-    </div>
-    """
-    st.components.v1.html(html_code, height=300, width=500)
+    st.components.v1.html(generate_html(address_eglise), height=300)
+
 with col2:
+    st.markdown("### Réception")
     st.markdown("Réception au Clos Magnitos, à 4 minutes de l'église :")
+
     address_reception = "Hameau de Magnitot, 1 rue du Prieuré, 95420 Saint-Gervais"
-    html_code = f"""
-    <div style="width: 100%; height: 300px;">
-        <iframe 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            loading="lazy"
-            style="border:0; width: 100%; height: 100%;"
-            src="https://www.google.com/maps/embed/v1/place?key={API_GOOGLE_MAPS}&q={address_reception}&zoom=15&maptype=roadmap"
-        >
-        </iframe>
-    </div>
-    """
-    st.components.v1.html(html_code, height=300, width=500)
+    st.components.v1.html(generate_html(address_reception), height=300)
 
 st.divider()
 st.header("Le programme")
