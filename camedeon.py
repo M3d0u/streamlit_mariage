@@ -82,7 +82,7 @@ st.divider()
 st.header("Le programme")
 
 # Define columns with proportionally smaller arrow columns
-col1, col_arrow1, col2, col_arrow2, col3, col_arrow3, col4, col_arrow4, col5 = st.columns(
+col1, col2, col3, col4, col5 = st.columns(
     [1, 1, 1, 1, 1]
 )
 
