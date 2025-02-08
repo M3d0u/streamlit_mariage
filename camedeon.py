@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-API_GOOGLE_MAPS = st.secrets["API_GOOGLE_MAPS"]
+API_GOOGLE_MAPS = os.environ['API_GOOGLE_MAPS']
 
 @st.dialog("Répondre à l'invitation")
 def show_contact_form():
