@@ -3,7 +3,7 @@ import requests
 import base64
 import re
 
-WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
+WEBHOOK_URL = os.environ['WEBHOOK_URL']
 
 def image_to_base64(image_path):
     with open(image_path, "rb") as img_file:
