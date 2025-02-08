@@ -1,5 +1,6 @@
-import streamlit as st
 from assets.utils import contact_form, image_to_base64
+import streamlit as st
+import os
 
 st.set_page_config(
     page_title="Médéric & Camille",
